@@ -13,6 +13,10 @@ describe('validBraces', () => {
     const result = validBraces('()[]')
     expect(result).toEqual(true)
   })
+    it('returns true when given codewars example', () => {
+    const result = validBraces("([{}])")
+    expect(result).toEqual(true)
+  })
     it('returns false when giving a pair of matching & non-matching braces', () => {
     const result = validBraces('(){)')
     expect(result).toEqual(false)
