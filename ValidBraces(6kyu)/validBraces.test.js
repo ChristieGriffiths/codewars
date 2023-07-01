@@ -9,4 +9,12 @@ describe('validBraces', () => {
     const result = validBraces('(}')
     expect(result).toEqual(false)
   })
+    it('returns true when giving 2 pairs of matching braces', () => {
+    const result = validBraces('()[]')
+    expect(result).toEqual(true)
+  })
+    it('returns false when giving a pair of matching & non-matching braces', () => {
+    const result = validBraces('(){)')
+    expect(result).toEqual(false)
+  })
 })

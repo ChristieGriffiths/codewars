@@ -1,7 +1,7 @@
 function validBraces(braces){
   const regex = /.{1,2}/g;
   const pairedString = braces.match(regex);
-  console.log(pairedString)
+
   for (let i = 0; i < pairedString.length; i++) {
     if (['()', '[]', '{}'].includes(pairedString[i])) {
       continue; 
