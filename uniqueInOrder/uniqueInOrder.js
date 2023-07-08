@@ -1,5 +1,7 @@
 var uniqueInOrder=function(iterable){
-  return iterable.split('');
+  splitInput = iterable.split('');
+  const uniq = [...new Set (splitInput)]
+  return uniq
 }
 
 module.exports = uniqueInOrder;
