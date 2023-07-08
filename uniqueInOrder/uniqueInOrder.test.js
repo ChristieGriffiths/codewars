@@ -16,4 +16,7 @@ describe('uniqueInOrder', () => {
   it('takes a two identical characters and returns them inside an array but with removing any duplicates that are next to each other', () =>{
     expect(uniqueInOrder('AAAABB')).toEqual(['A', 'B'])
   });
+  it('takes a two identical characters and returns them inside an array but with removing any duplicates that are next to each other', () =>{
+    expect(uniqueInOrder('AAAABBBCCDAABBB')).toEqual(['A', 'B', 'C', 'D', 'A', 'B'])
+  });
 });
