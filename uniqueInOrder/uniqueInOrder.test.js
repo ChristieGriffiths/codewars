@@ -10,4 +10,10 @@ describe('uniqueInOrder', () => {
   it('takes a two identical characters and returns them inside an array but with removing any duplicates', () =>{
     expect(uniqueInOrder('aa')).toEqual(['a'])
   });
+  it('takes a two identical characters and returns them inside an array but with removing any duplicates that are next to each other', () =>{
+    expect(uniqueInOrder('aaba')).toEqual(['a', 'b', 'a'])
+  });
+  it('takes a two identical characters and returns them inside an array but with removing any duplicates that are next to each other', () =>{
+    expect(uniqueInOrder('AAAABB')).toEqual(['A', 'B'])
+  });
 });
