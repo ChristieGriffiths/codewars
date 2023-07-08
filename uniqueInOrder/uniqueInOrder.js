@@ -1,5 +1,10 @@
 var uniqueInOrder=function(iterable){
-  splitInput = iterable.split('');
+  let splitInput;
+  if (Array.isArray(iterable)) {
+    splitInput = iterable
+  } else {
+    splitInput = iterable.split('');
+  }
   console.log(`split input before loop ${splitInput}`)
   for (let i = 1; i < splitInput.length; i ++) {
     if (splitInput[i] === splitInput[i-1]) {
