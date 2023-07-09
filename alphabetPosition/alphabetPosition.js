@@ -1,9 +1,9 @@
 function alphabetPosition(text) {
-  splitText = text.split("")
+  downcaseSplitText = text.toLowerCase().split("")
   result = []
   pattern = /[a-zA-Z]/
-  for(i = 0; i < splitText.length; i++) {
-    let element = splitText[i]
+  for(i = 0; i < downcaseSplitText.length; i++) {
+    let element = downcaseSplitText[i]
     if(pattern.test(element)) {
       result.push(element.charCodeAt(0) - 96)
     }
