@@ -22,3 +22,5 @@ describe('validBraces', () => {
     expect(result).toEqual(false)
   })
 })
+
+"()))"
