@@ -1,13 +1,14 @@
 function moveZeros(arr) {
-  let zeros = []
+  let zeros = [];
   for (let i = 0; i < arr.length; i ++) {
     if(arr[i] === 0) {
-      zeros.push(0)
-      arr.splice(i, 1)
+      zeros.push(0);
+      arr.splice(i, 1);
+      i --;
     }
   }
-  arr.push(...zeros)
-  return arr
+  arr.push(...zeros);
+  return arr;
 }
 
 module.exports = moveZeros;
