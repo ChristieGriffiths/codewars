@@ -1,5 +1,5 @@
 function moveZeros(arr) {
-  return
+  return arr
 }
 
 module.exports = moveZeros;
