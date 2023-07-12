@@ -1,15 +1,17 @@
 snail = function(array) {
+  let result = array[0]
   if(array.length !== 1) {
-    let result = array[0]
-    result.push(array[1][2])
-    result.push(...array[2].reverse())
-    result.push(...array[1].slice(0, 2));
-    console.log(result);
-    return result;
+    for(let i = 1; i < array.length - 1; i++) {
+      let lastElement = array[i].length - 1
+      result.push(array[i][lastElement])
+      array[i].splice(lastElement, 1)  
+    }
+    
   } else {
     return array[0];
   }
-  
+  console.log(result)
+  console.log(array)
 }
 
 module.exports = snail;

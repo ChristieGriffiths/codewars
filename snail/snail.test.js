@@ -10,6 +10,10 @@ describe("snail", () => {
     expect(snail(input)).toEqual([1])
   })
   it("takes array of arrays and returns an array of the input but in a snake like fashion", () => {
+    input = [[1, 2], [3, 4]]
+    expect(snail(input)).toEqual([1, 2, 4, 3])
+  })
+  it("takes array of arrays and returns an array of the input but in a snake like fashion", () => {
     input = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     expect(snail(input)).toEqual([1, 2, 3, 6, 9, 8, 7, 4, 5])
   })
