@@ -5,4 +5,8 @@ describe("snail", () => {
     input = [[]]
     expect(snail(input)).toEqual([])
   })
+  it("takes an array of a non-empty array and returns the inside array", () => {
+    input = [[1]]
+    expect(snail(input)).toEqual([1])
+  })
 })
