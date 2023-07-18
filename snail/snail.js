@@ -35,21 +35,32 @@ snail = function(array) {
     console.log('result after the for loop: ' + result);
 
     let lastElements = array[array.length - 1]
-    lastElements === undefined ? lastElements.reverse() : console.log("code ran this far");
-    console.log(result)
-    console.log(array.length - 1)
+    Array.isArray(lastElements) ? result.push(...lastElements.reverse()) : console.log("code ran this far");
+    console.log('result at line 39: ' + result)
     // push the last array to the result but in reverse order 
     array.splice(array.length - 1, 1);
     // delete the last array from the arrays
-    console.log('array at line 44 : ' + array)
-    for(let i = array.length - 0; i === 0; i--) {
-      array[i][0] === undefined ? result.push(array[i][0]) : console.log("code ran this far");
+    console.log('array at line 43 : ' + array)
+    for(let i = array.length - 1; i > -1; i--) {
+      console.log(array[i][0])
+      console.log(Array.isArray(array[i]));
+      Array.isArray(array[i])? result.push(array[i][0]) : console.log("code ran this far");
+      console.log(result)
+
       // add the first element of each array but in reverse order
-      result.splice(array[i][0], 1)
+      console.log(array)
+      array[i].splice(0, 1)
+      console.log(array)
       // remove the first element after adding it
     }
+    console.log(array)
+    console.log('sum of arrays at line 51: ' + sumNestedArrays(array))
   }
+  console.log('reaches the end: ');
+  console.log(result);
+
   return(result);
+
 }
 
 module.exports = snail;
