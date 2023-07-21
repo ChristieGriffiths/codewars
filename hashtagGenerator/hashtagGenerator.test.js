@@ -13,9 +13,9 @@ describe('uniqueInOrder', () => {
     const input = "a".repeat(140)
     expect(generateHashtag(input)).toEqual(false)
   });
-  it('result greater than 140 return false', () =>{
+  it('Capitalizes each seperate word', () =>{
     const input = "Test this is"
-    expect(generateHashtag(input)).toEqual("#Testthisis")
+    expect(generateHashtag(input)).toEqual("#TestThisIs")
   });
   it('does not add # if already starts with #', () =>{
     const input = "#Test"

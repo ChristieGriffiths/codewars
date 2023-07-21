@@ -4,8 +4,11 @@ function generateHashtag (str) {
   if(!str.startsWith("#")) {
     result = "#"
   }
-  result = result + str.charAt(0).toUpperCase() + str.slice(1);
-  result = result.replace(/\s+/g, '');
+  splitInput = str.split(" ")
+  let capitalizedWords = splitInput.map(function(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  });
+  result += capitalizedWords.join("")
   if(result.length > 140) {
     return false;
   } else {
