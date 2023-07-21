@@ -9,4 +9,8 @@ describe('uniqueInOrder', () => {
     const input = "Test"
     expect(generateHashtag(input)).toEqual("#Test")
   });
+  it('hashtags and capitalises a string', () =>{
+    const input = "test"
+    expect(generateHashtag(input)).toEqual("#Test")
+  });
 });
