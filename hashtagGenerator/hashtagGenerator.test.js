@@ -14,7 +14,11 @@ describe('uniqueInOrder', () => {
     expect(generateHashtag(input)).toEqual(false)
   });
   it('result greater than 140 return false', () =>{
-    const input = "Test this  is"
+    const input = "Test this is"
     expect(generateHashtag(input)).toEqual("#Testthisis")
+  });
+  it('does not add # if already starts with #', () =>{
+    const input = "#Test"
+    expect(generateHashtag(input)).toEqual("#Test")
   });
 });

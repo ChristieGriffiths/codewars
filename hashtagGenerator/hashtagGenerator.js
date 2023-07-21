@@ -1,6 +1,9 @@
 function generateHashtag (str) {
   if(str.trim().length === 0) return false 
-  let result = "#"
+  let result = "";
+  if(!str.startsWith("#")) {
+    result = "#"
+  }
   result = result + str.charAt(0).toUpperCase() + str.slice(1);
   result = result.replace(/\s+/g, '');
   if(result.length > 140) {
