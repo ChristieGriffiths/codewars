@@ -5,4 +5,8 @@ describe('uniqueInOrder', () => {
     const input = ""
     expect(generateHashtag(input)).toEqual(false)
   });
+  it('hashtags a string', () =>{
+    const input = "Test"
+    expect(generateHashtag(input)).toEqual("#Test")
+  });
 });
