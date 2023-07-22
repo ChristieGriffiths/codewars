@@ -5,4 +5,8 @@ describe('uniqueInOrder', () => {
     const input = ""
     expect(validatePIN(input)).toEqual(false)
   });
+  it('returns false to single digit input', () =>{
+    const input = "1"
+    expect(validatePIN(input)).toEqual(false)
+  });
 });
