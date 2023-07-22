@@ -33,4 +33,8 @@ describe('uniqueInOrder', () => {
     const input = "1.23456"
     expect(validatePIN(input)).toEqual(false)
   });
+  it('returns false to 4 digit float input', () =>{
+    const input = "1.256"
+    expect(validatePIN(input)).toEqual(false)
+  });
 });
