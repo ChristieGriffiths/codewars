@@ -1,5 +1,5 @@
 function validatePIN (pin) {
-  //return true or false
+  return false
 }
 
 module.exports = validatePIN;
