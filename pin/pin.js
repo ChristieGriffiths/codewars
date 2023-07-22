@@ -1,5 +1,5 @@
 function validatePIN (pin) {
-  if(pin.length === 4) {
+  if(pin.length === 4 || pin.length === 6) {
     return true; 
   } else {
     return false;

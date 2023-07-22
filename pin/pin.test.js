@@ -13,4 +13,8 @@ describe('uniqueInOrder', () => {
     const input = "1234"
     expect(validatePIN(input)).toEqual(true)
   });
+  it('returns true to 6 digit input', () =>{
+    const input = "123456"
+    expect(validatePIN(input)).toEqual(true)
+  });
 });
