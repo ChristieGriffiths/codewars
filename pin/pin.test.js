@@ -9,4 +9,8 @@ describe('uniqueInOrder', () => {
     const input = "1"
     expect(validatePIN(input)).toEqual(false)
   });
+  it('returns true to 4 digit input', () =>{
+    const input = "1234"
+    expect(validatePIN(input)).toEqual(true)
+  });
 });
