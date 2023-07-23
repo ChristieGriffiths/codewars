@@ -21,6 +21,10 @@ describe('validBraces', () => {
     const result = validBraces('(){)')
     expect(result).toEqual(false)
   })
+    it('returns false when a new braces is opened before the former braces are closed', () => {
+    const result = validBraces('[(])')
+    expect(result).toEqual(false)
+  })
 })
 
 "()))"
