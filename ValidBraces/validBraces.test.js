@@ -25,6 +25,8 @@ describe('validBraces', () => {
     const result = validBraces('[(])')
     expect(result).toEqual(false)
   })
+    it('returns false if brackets are never closed', () => {
+    const result = validBraces('(((({{')
+    expect(result).toEqual(false)
+  })
 })
-
-"()))"

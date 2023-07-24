@@ -1,30 +1,83 @@
 function validBraces(braces) {
-  let result; 
+  let result = true;
   let storeOpeningBraces = []
   const splitInput = braces.split("")
+  console.log('the split input', splitInput)
   const openingBrackets = ["(", "[", "{"]
-  const lastElement = openingBrackets.length - 1
   for (let i = 0; i < splitInput.length; i++) {
     const brace = splitInput[i];
-  
+    const lastElement = storeOpeningBraces.length - 1
+    
     if (openingBrackets.includes(brace)) {
       storeOpeningBraces.push(brace);
     } else if (
-      (brace === ")" && storeOpeningBraces[lastElement] === "(") ||
+      (brace === ")" && storeOpeningBraces[lastElement] === "(" ) ||
       (brace === "}" && storeOpeningBraces[lastElement] === "{") ||
       (brace === "]" && storeOpeningBraces[lastElement] === "[")
     ) {
-
       storeOpeningBraces.splice(lastElement, 1)
     } else {
-      // Handle the case when the condition is not met
-      // For example, you can return false here or do something else
       result = false;
-      break 
+      break;
     }
   }
-  if(result === false) { return false }
-  return true 
+
+  function evenParentheses() {
+    let openCount = 0
+    let closedCount = 0
+    for (let i = 0; i < splitInput.length; i++) {
+      if (splitInput[i] === "(") {
+        openCount++;
+      } else if (splitInput[i] === ")") {
+        closedCount++;
+      }
+    }
+    if(openCount !== closedCount) {
+      return false 
+    } else {
+      return true
+    }
+  }
+  function evenBrackets() {
+    let openCount = 0
+    let closedCount = 0
+    for (let i = 0; i < splitInput.length; i++) {
+      if (splitInput[i] === "[") {
+        openCount++;
+      } else if (splitInput[i] === "]") {
+        closedCount++;
+      }
+    }
+    if(openCount !== closedCount) {
+      return false 
+    } else {
+      return true
+    }
+  }
+  function evenBraces() {
+    let openCount = 0
+    let closedCount = 0
+    for (let i = 0; i < splitInput.length; i++) {
+      if (splitInput[i] === "{") {
+        openCount++;
+      } else if (splitInput[i] === "}") {
+        closedCount++;
+      }
+    }
+    if(openCount !== closedCount) {
+      return false 
+    } else {
+      return true
+    }
+  }
+  console.log('even Parentheses result' , evenParentheses())
+
+  if ((evenParentheses() && evenBrackets() && evenBraces()) === false) { 
+    result = false;
+}
+
+
+    return result 
 }
 
 
@@ -49,13 +102,13 @@ function validBraces(braces) {
 // const pairedString = braces.match(regex);
 
 // for (let i = 0; i < pairedString.length; i++) {
-  //   if (['()', '[]', '{}'].includes(pairedString[i])) {
-  //     continue; 
-  //   } else {
-  //     return false 
-  //   }
-  // }
-  // return true 
+//     if (['()', '[]', '{}'].includes(pairedString[i])) {
+//       continue; 
+//     } else {
+//       return false 
+//     }
+//   }
+//   return true 
 
 
 module.exports = validBraces;
