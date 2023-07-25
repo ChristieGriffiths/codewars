@@ -5,4 +5,8 @@ describe('duplicateEncoder', () => {
     const input = "a"
     expect(duplicateEncode(input)).toEqual("(")
   });
+  it('takes a string with duplicated characters', () =>{
+    const input = "aa"
+    expect(duplicateEncode(input)).toEqual("))")
+  });
 });
