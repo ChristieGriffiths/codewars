@@ -16,3 +16,7 @@ Tests:
     assert.strictEqual(duplicateEncode("Success"),")())())","should ignore case");
     assert.strictEqual(duplicateEncode("(( @"),"))((");
   });
+
+
+
+  
