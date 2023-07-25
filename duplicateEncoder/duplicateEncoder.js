@@ -1,7 +1,8 @@
 function duplicateEncode(word){
+    const inputDowncase = word.toLowerCase()
     const charMap = {};
     const duplicates = [];  
-    for (let char of word) {
+    for (let char of inputDowncase) {
         if (charMap[char]) {
             if (!duplicates.includes(char)) {
                 duplicates.push(char);
@@ -12,7 +13,7 @@ function duplicateEncode(word){
         }
     }
     
-    const inputArray = word.split("")
+    const inputArray = inputDowncase.split("")
     const result = inputArray.map((character) => {
         if(duplicates.includes(character)) {
             return character = ")"

@@ -13,4 +13,8 @@ describe('duplicateEncoder', () => {
     const input = "aab"
     expect(duplicateEncode(input)).toEqual("))(")
   });
+  it('takes a string with duplicated characters', () =>{
+    const input = "Success"
+    expect(duplicateEncode(input)).toEqual(")())())")
+  });
 });
