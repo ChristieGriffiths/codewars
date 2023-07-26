@@ -10,7 +10,7 @@ describe('sumMul', () => {
   it('returns sum of all multiples below n', () => {
     expect(sumMul(4, 123)).toEqual(1860)
   })
-  it('returns sum of all multiples below n', () => {
-    expect(sumMul(4, -7)).toEqual("INVALID")
+  it('invalid if m is less than or equal to 0', () => {
+    expect(sumMul(4, 0)).toEqual("INVALID")
   })
 })
