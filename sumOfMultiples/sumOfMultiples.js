@@ -1,5 +1,10 @@
 function sumMul(n,m){
-  //your idea here
+  let sum = 0;
+  for(let i = 1; i < m; i++) {
+    sum += (i * n)
   }
+  return sum;
+}
+
 
 module.exports = sumMul;
