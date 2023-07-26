@@ -1,7 +1,12 @@
 function sumMul(n,m){
   let sum = 0;
-  for(let i = 1; i < m; i++) {
-    sum += (i * n)
+  let counter = 0;
+  let result = 0;
+
+  while (result < m) {
+    counter += 1 
+    sum += result
+    result = (counter * n)
   }
   return sum;
 }
