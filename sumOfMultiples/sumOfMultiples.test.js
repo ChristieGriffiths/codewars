@@ -7,4 +7,7 @@ describe('sumMul', () => {
   it('returns sum of all multiples below n', () => {
     expect(sumMul(3, 13)).toEqual(30)
   })
+  it('returns sum of all multiples below n', () => {
+    expect(sumMul(4, 123)).toEqual(1860)
+  })
 })
