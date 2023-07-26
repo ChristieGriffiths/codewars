@@ -8,6 +8,7 @@ function sumMul(n,m){
     sum += result
     result = (counter * n)
   }
+  if(m < 0) { return "INVALID"}
   return sum;
 }
 
