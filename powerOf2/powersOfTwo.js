@@ -1,5 +1,5 @@
 function powersOfTwo(n){
-  return []
+  return [1]
 }
 
 module.exports = powersOfTwo;
