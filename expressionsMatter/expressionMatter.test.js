@@ -10,4 +10,7 @@ describe('expressionMatter', () => {
   it('returns highest achievable result', () => {
     expect(expressionMatter(5, 1, 3)).toEqual(20)
   })
+  it('returns highest achievable result', () => {
+    expect(expressionMatter(3, 5, 7)).toEqual(105)
+  })
 })
