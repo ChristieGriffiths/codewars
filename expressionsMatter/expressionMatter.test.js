@@ -13,4 +13,7 @@ describe('expressionMatter', () => {
   it('returns highest achievable result', () => {
     expect(expressionMatter(3, 5, 7)).toEqual(105)
   })
+  it('returns highest achievable result', () => {
+    expect(expressionMatter(1, 1, 1)).toEqual(3)
+  })
 })
