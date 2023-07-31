@@ -1,17 +1,17 @@
 function isIsogram(str){
+  str = str.toLowerCase();
   const characterCount = {}
-  
   str.split('').forEach(function(letter) {
     if(characterCount[letter]===undefined) {
-      characterCount[letter] = 1
+      characterCount[letter] = 1;
     } else {
-      characterCount[letter] += 1
+      characterCount[letter] += 1;
     }
   })
   for (const key in characterCount) {
     const value = characterCount[key];
-    if(value > 1) { return false }
-    return true 
+    if (value > 1) { return false }
+    return true;
   }
 }
 

@@ -7,7 +7,11 @@ describe("isIsogram", () => {
    it("returns false when characters are repeated", () => {
     expect(isIsogram('aa')).toEqual(false)
   })
+   it("returns false when characters are repeated regardless of case", () => {
+    expect(isIsogram('Aa')).toEqual(false)
+  })
    it("returns true when no characters are repeated", () => {
     expect(isIsogram('Dermatoglyphics')).toEqual(true)
   })
+ 
 })
