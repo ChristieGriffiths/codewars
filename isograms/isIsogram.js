@@ -1,5 +1,6 @@
 function isIsogram(str){
   str = str.toLowerCase();
+  console.log(str)
   const characterCount = {}
   str.split('').forEach(function(letter) {
     if(characterCount[letter]===undefined) {
@@ -11,8 +12,8 @@ function isIsogram(str){
   for (const key in characterCount) {
     const value = characterCount[key];
     if (value > 1) { return false }
-    return true;
   }
+  return true;
 }
 
 module.exports = isIsogram;
