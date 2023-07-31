@@ -1,7 +1,7 @@
 const isIsogram = require('./isIsogram')
 
-describe("", () => {
-  it("", () => {
-    
+describe("isIsogram", () => {
+  it("returns true when no characters repeat", () => {
+    expect(isIsogram('a')).toEqual(true)
   })
 })
