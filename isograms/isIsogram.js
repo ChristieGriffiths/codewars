@@ -1,19 +1,18 @@
-function isIsogram(str){
+function isIsogram(str) {
   str = str.toLowerCase();
-  console.log(str)
-  const characterCount = {}
-  str.split('').forEach(function(letter) {
-    if(characterCount[letter]===undefined) {
-      characterCount[letter] = 1;
+  const characterCount = {};
+  for (const char of str) {
+    if (characterCount[char] === undefined) {
+      characterCount[char] = 1 
     } else {
-      characterCount[letter] += 1;
+      characterCount[char] += 1
     }
-  })
+  }
   for (const key in characterCount) {
     const value = characterCount[key];
-    if (value > 1) { return false }
+    if(value > 1) { return false }
   }
   return true;
-}
+} 
 
-module.exports = isIsogram;
+module.exports = isIsogram;   

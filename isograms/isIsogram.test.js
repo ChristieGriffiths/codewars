@@ -13,5 +13,4 @@ describe("isIsogram", () => {
    it("returns true when no characters are repeated", () => {
     expect(isIsogram('Dermatoglyphics')).toEqual(true)
   })
- 
 })
