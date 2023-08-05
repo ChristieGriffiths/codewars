@@ -1,10 +1,9 @@
 function powersOfTwo(n){
-  let result = [];
-  for (let i = 0; i <= n; i++) {
-    console.log( 2** i)
-    result.push(2 ** i);
+  result = [1]
+  for(let i = 1; i <= n; i++) {
+    result.push(2 ** i); 
   }
-  return result;
+  return result; 
 }
 
 module.exports = powersOfTwo;

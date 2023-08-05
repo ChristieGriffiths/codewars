@@ -13,3 +13,6 @@ describe("Basic Tests", function(){
     assert.deepEqual(powersOfTwo(4), [1, 2, 4, 8, 16])
   })
 });
+
+create an array to hold the result 
+create a loop that that loops n times 
