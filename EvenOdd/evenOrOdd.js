@@ -1,5 +1,5 @@
 function evenOrOdd(number) {
-  return 'Even'
+  return number % 2 === 0 ? 'Even' : 'Odd';
 }
 
 module.exports = evenOrOdd;
